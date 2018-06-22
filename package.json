@@ -1,0 +1,40 @@
+{
+  "name": "@netnexus/irevolut",
+  "version": "0.4.3",
+  "description": "Connect to Revolut, fetch and create and transfers, export transactions as QIF",
+  "main": "dist/src/revolut-client.js",
+  "types": "dist/src/revolut-client.d.ts",
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/netnexus/IRevolut.git"
+  },
+  "bugs": {
+    "url": "https://github.com/netnexus/IRevolut/issues"
+  },
+  "homepage": "https://github.com/netnexus/IRevolut#readme",
+  "scripts": {
+    "test": "./node_modules/.bin/istanbul -x='cli.js' --include-all-sources cover ./node_modules/.bin/_mocha $(find dist/test/unit -name '*.js') --dir coverage/unit --print none && ./node_modules/.bin/remap-istanbul -i coverage/unit/coverage.json -o coverage/unit/coverage-ts -t html"
+  },
+  "dependencies": {
+    "@types/commander": "~2.12.2",
+    "@types/dotenv": "~4.0.2",
+    "async-file": "~2.0.2",
+    "axios": "^0.18.0",
+    "commander": "~2.15.0",
+    "dotenv": "~5.0.1",
+    "qif-writer": "~0.1.0"
+  },
+  "devDependencies": {
+    "@types/chai": "~4.1.2",
+    "@types/mocha": "~2.2.48",
+    "@types/node": "~9.4.7",
+    "@types/sinon": "~4.3.0",
+    "chai": "~4.1.2",
+    "istanbul": "~0.4.5",
+    "mocha": "~5.0.4",
+    "remap-istanbul": "~0.11.0",
+    "sinon": "~4.4.6"
+  }
+}
