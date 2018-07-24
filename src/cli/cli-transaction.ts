@@ -26,7 +26,7 @@ program
                     const qif = require("qif-writer");
                     const data = transactions.map((row) => ({
                         amount: row.legs[0].amount,
-                        date: new Date(row.completed_at).toLocaleDateString("en-US"),
+                        date: new Date(row.created_at).toLocaleDateString("en-US"),
                         memo: row.reference || row.type,
                         payee: row.legs[0].description
                             .replace("Payment from ", "")
