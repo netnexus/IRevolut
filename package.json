@@ -1,6 +1,6 @@
 {
   "name": "@netnexus/irevolut",
-  "version": "0.4.5",
+  "version": "0.4.6",
   "description": "Connect to Revolut, fetch and create and transfers, export transactions as QIF",
   "main": "dist/src/revolut-client.js",
   "types": "dist/src/revolut-client.d.ts",
