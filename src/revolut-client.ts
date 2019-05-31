@@ -1,4 +1,4 @@
-import { AxiosResponse, default as axios } from "axios";
+import { AxiosResponse, default as axios, Method } from "axios";
 const BASE_URL = "https://b2b.revolut.com";
 
 export class RevolutClient {
@@ -37,7 +37,7 @@ export class RevolutClient {
      * @param {string} method = get
      * @param {*} data
      */
-    private request(endpoint: string, method: string = "get", data?: any): Promise<any> {
+    private request(endpoint: string, method: Method = "get", data?: any): Promise<any> {
         const headers: any = {
             "Content-Type": "application/json",
         };

@@ -53,7 +53,7 @@ describe("RevolutClient", () => {
         it("should call correct endpoint", async () => {
             // arrange
             const spyOnRequest = sinon.stub(client as any, "request")
-                .resolves([
+                .returns(Promise.resolve([
                     {
                         completed_at: "2018-06-20T10:35:23.877Z",
                         created_at: "2018-06-20T10:35:23.877Z",
@@ -89,7 +89,7 @@ describe("RevolutClient", () => {
                         type: "fee",
                         updated_at: "2018-06-19T23:00:56.950Z",
                       },
-                ]);
+                ]));
 
             // act
             const transactions = await client.getTransactions(2);
